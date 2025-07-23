@@ -2,10 +2,10 @@
 
 #show: template.with(
   book: (
-    title: [Título do Livro],
+    title: [Álgebra Linear com Aplicações],
     author: (
-      long: [Nome Sobrenome],
-      short: [Sobrenome, N.]
+      long: [Howard Anton & Chris Rorres],
+      short: [Anton, H.; Rorres, C.]
     )
   ),
   author: [Igo da Costa Andrade]

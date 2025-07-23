@@ -1,20 +1,15 @@
 #import "../styles.typ": *
 
-= Título do Capítulo
-
-Conforme #cite(<Halliday2>, form: "prose")
+= Sistemas de Equações Lineares e Matrizes
 
 
-#lorem(50)
 
-== Seção de segundo nível
+== Introdução aos sistemas de equações lineares 
 
-#lorem(40)
+=== Conjunto de exercícios (página 9)
 
-#lorem(30)
++ Em cada parte, determine se a equação é linear em $x_1$, $x_2$ e $x_3$.
+  #set enum(numbering: "(a)")
+  + $x_1 + 5x_2 - sqrt(2) x_3 = 1$
 
-=== Seção de terceiro nível
-
-#lorem(20)
-
-#pagebreak()
++

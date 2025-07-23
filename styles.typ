@@ -1,4 +1,4 @@
-#let primary-color = rgb("#f00024")
+#let primary-color = rgb("#0062a2")
 
 #let fmt(number, precision: 3,  sci: true) = {
   if number == 0 {
@@ -74,7 +74,7 @@
       column-gutter: 15pt,
       align: (left+bottom, right+horizon),
       [
-        #cite(<Halliday2>, form: "full")
+        #cite(<alca-anton>, form: "full")
       ],
       [
         #image("assets/images/capa.png", width: 3cm)
@@ -226,16 +226,19 @@
   show heading: set text(size: 12pt, fill: primary-color)
   show heading.where(): it => custom-headings(it)
   set list(marker: text(primary-color)[-])
-    set enum(
+  set enum(
     numbering: it => context {
       let headings = counter(heading).get()
       let sec = headings.at(0)
+      strong(text(primary-color)[#it.])
+      /*
       if headings.len() > 1 {
         let subsec = headings.at(1)
         strong(text(primary-color)[#sec.#subsec.#it.])
       } else {
         strong(text(primary-color)[#sec.#it.])
       }
+      */
   })
 
   
