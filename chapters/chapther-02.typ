@@ -1,5 +1,6 @@
 #import "../styles.typ": *
 
+#pagebreak()
 = Título do Capítulo
 
 #lorem(20)
