@@ -7,7 +7,7 @@
 == Introdução aos sistemas de equações lineares 
 
 #set heading(numbering: none)
-=== Conjunto de exercícios (página 9)
+=== Conjunto de exercícios 1.1 (página 9)
 
 + Em cada parte, determine se a equação é linear em $x_1$, $x_2$ e $x_3$.
   #set enum(numbering: "(a)")
@@ -270,4 +270,202 @@
     $
     Em particular, tomando $r = s = t = 0$, obtemos a solução trivial $(0,0,0,0)$.
   ])
+
++ Escreva um sistema de equações lineares constituído de trẽs equações em três incógnitas com 
+
+  #set enum(numbering: "(a)")
+  + nenhuma solução
+    #solution([
+      $
+        cases(
+          &x + &y + &z &= 1 \
+          &x - &y - 2&z &= 2 \
+          &x + &y + &z &= 0
+        )
+      $
+    ])
+  + exatamente uma solução
+    #solution([
+      $
+        cases(
+          &x + &y &- z &= &2\
+          &  &y &+ z &= -&1\
+          &x - &y &+ z &= &0
+        )
+      $
+    ])
+  + uma infinidade de soluções
+    #solution([
+      $
+        cases(
+          &x + &y &+ z &= &1\
+          &x & &-z &= &5\
+          2&x + &y & &= &6
+        )
+      $
+    ])
   
++ Em cada parte, determine se o terno ordenado é uma solução do sistema linear
+
+$
+  cases(
+    2x_1 &- 4x_2 &- x_3 &= 1\
+    x_1 &- 3x_2 &+ x_3 &= 1\
+    3x_1 &- 5x_2 &- 3x_3 &= 1
+  )
+$
+
+  #set enum(numbering: "(a)")
+  + $(3, 1, 1)$
+    #solution([
+      Substituindo o terno ordenado $(3, 1, 1)$ na primeira equação, temos:
+      $
+        2x_1 - 4x_2 - x_3 = 1 &arrow.double 2 dot 3 &- 4 dot 1 - 1  &= 1\
+                              &arrow.double &6 - 4 - 1 &= 1\
+                              &arrow.double &1 &= 1 
+      $
+      Substituindo na segunda equação:
+      $
+        x_1 - 3x_2 + x_3 = 1 &arrow.double &3 - 3 dot 1 + 1 & = 1 \
+                             &arrow.double &3 - 3 - 1 & = 1\
+                             &arrow.double &1 & = 1
+      $
+
+      Substituindo na terceira equação:
+      $
+        3x_1 - 5x_2 - 3x_3 = 1 &arrow.double &3 dot 3 - 5 dot 1 - 3 dot 1 &= 1\
+                               &arrow.double &9 - 5 - 3 & = 1\
+                               &arrow.double & 1 & = 1
+      $
+
+      Logo, o terno $(3, 1, 1)$ é solução do sistema de equações.
+    ])
+  + $(3, -1, 1)$
+    #solution([
+      Substituindo o terno na primeira equação, temos:
+      $
+        2x_1 - 4x_2 - x_3 = 1 &arrow.double &2 dot 3 - 4 dot (-1) - 1 &= 1\
+                              &arrow.double &6 + 4 - 1 &= 1\
+                              &arrow.double &9 &= 1 ("inválido")
+      $
+      Como o terno ordenado não é solução da primeira equação, também não será solução do sistema.
+    ])
+  + $(13, 5, 2)$
+    #solution([
+      Substituindo o terno na primeira equação, temos:
+      $
+        2x_1 - 4x_2 - x_3 = 1 &arrow.double &2 dot 13 - 4 dot 5 - 2 &= 1\
+                              &arrow.double &26 - 20 -2 &= 1\
+                              &arrow.double &4 &= 1 quad ("inválido")
+      $
+      Como o terno ordenado não é solução da primeira equação, também não será solução do sistema.
+    ])
+  + $(13/2, 5/2, 2)$
+    #solution([
+      Substituindo o terno na primeira equação, temos:
+      $
+        2x_1 - 4x_2 - x_3 = 1 &arrow.double &2 dot 13/2 - 4 dot 5/2 - 2 &= 1\
+                              &arrow.double &13 -10 - 2 &= 1\
+                              &arrow.double &1 &= 1
+
+      $
+      Substituindo o terno na segunda equação, temos:
+      $
+        x_1 - 3x_2 + x_3 = 1 &arrow.double & 13/2 - 3 dot 5/2 + 2 &= 1\
+                             &arrow.double &13/2 - 15/2 + 2 & = 1\
+                             &arrow.double &-1 + 2 &= 1\
+                             &arrow.double &1 & = 1 
+      $ 
+      Substituindo o terno na terceira equação, temos:  
+      $
+        3x_1 - 5x_2 - 3x_2 = 1 &arrow.double & 3 dot 13/2 - 5 dot 5/2 - 3 dot 2 & = 1\
+                               &arrow.double &39/2 - 25/2 - 6 &= 1\
+                               &arrow.double &14/2 - 6 & = 1\
+                               &arrow.double & 1 & = 1
+      $
+      Logo, o terno $(13/2, 5/2, 2)$ é solução do sistema de equações.
+    ])
+  + $(17, 7, 5)$
+    #solution([
+      Substituindo o terno ordenado na primeira equação:
+      $
+        2x_1 - 4x_2 - x_2 = 1 &arrow.double &2 dot 17 - 4 dot 7 - 5 & = 1\
+                              &arrow.double &34 - 28 - 5 &= 1\
+                              &arrow.double &1 &= 1
+      $
+
+      Substituindo o terno ordenado na segunda equação:
+      $
+        x_1 - 3x_2 + x_3 = 1 &arrow.double & 17 - 3 dot 5 + 5 & = 1\
+                             &arrow.double & 7 &= 1 quad ("inválido")
+      $
+      Como o terno ordenado não é solução da segunda equação, também não será solução do sistema.
+
+      Observemsos que encontramos dois ternos ordenados os quais são solução so sistema de equações. Nesse caso, podemos conluir que o sistema possui infinitas soluções. De fato, 
+
+      #set math.mat(align: right, delim: "[")
+      $
+        cases(
+          2x_1 &- 4x_2 &- x_3 &= 1\
+          x_1 &- 3x_2 &+ x_3 &= 1\
+          3x_1 &- 5x_2 &- 3x_3 &= 1
+        )
+        &arrow.double mat(
+          2, -4, -1, 1;
+          1, -3, 1, 1;
+          3, -5, -3, 1
+        ) 
+        arrow.double
+        (L_1 arrow.l.r L_2) & arrow.double &mat(
+          1, -3, 1, 1;
+          2, -4, -1, 1;
+          3, -5, -3, 1
+        )\
+        &arrow.double 
+        (L_2 arrow L_2 - 2L_1; L_3 arrow.l.r L_3 - 3L_1) & arrow.double &mat(
+          1, -3, 1, 1;
+          0, 2, -3, -1;
+          0, 4, -6, -2
+        )\
+        &arrow.double
+        (L_2 arrow.l.r L_2/2; L_3 arrow.l.r L_3/4) & arrow.double  &mat(
+          1, -3, 1, 1;
+          0, 1, -3/2, -1/2;
+          0, 1, -3/2, -1/2
+        )\
+        &arrow.double 
+        (L_1 arrow L_1 + 3L_2; L_3 arrow L_3 - L_2) &arrow.double &mat(
+          1, 0, -7/2, -1/2;
+          0, 1, -3/2, -1/2;
+          0, 0, 0, 0
+        )
+      $
+      O desenvolvimento acima mostra que o sistema de equações pode ser parametrizado em função de $x_3$:
+      $
+        cases(
+          &x_1 - 7/2 x_3 &= -1/2\
+          &x_2 - 3/2 x_3 &= -1/2
+        )
+        arrow.double 
+        cases(
+          x_1 &= -1/2 + 7/2 x_3\
+          x_2 &= -1/2 + 3/2 x_3
+        )
+      $
+      Em particular, tomando $x_3 = 1$, obtemos:
+      $
+        cases(
+          x_1 &= -1/2 + 7/2 x_3 &= -1/2 + 7/2 &= 6/2 &= 3\
+          x_2 &= -1/2 + 3/2 x_3 & = -1/2 + 3/2 &= 2/2 &= 1
+        ),
+      $
+      que corresponde ao terno do item (a) $(3, 1,1)$. E, tomando $x_3 = 2$, obtemos:
+      $
+        cases(
+          x_1 &= -1/2 + 7/2 x_3 &= -1/2 + 7/2 dot 2 &= -1/2 + 14/2 &= 13/2\
+          x_2 &= -1/2 + 3/2 x_3 & = -1/2 + 3/2 dot 2 &= -1/2 + 6/2 &= 5/2
+        ),
+      $
+      que corresponde ao terno do item (d) $(13/2, 5/2, 2)$.
+    ])
+
