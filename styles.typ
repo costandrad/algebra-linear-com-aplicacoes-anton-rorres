@@ -219,6 +219,7 @@
   )
 
   //set math.equation(numbering: "(1)", number-align: bottom)
+  set math.mat(align: right, delim: "[")
 
 
   // 🧭 Numeração de seções e listas
@@ -240,6 +241,8 @@
       }
       */
   })
+
+  show figure: set figure.caption(position: top)
 
   
   body

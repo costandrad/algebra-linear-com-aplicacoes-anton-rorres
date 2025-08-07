@@ -135,7 +135,7 @@
   #solution([
     A matriz aumentada representativa do sistema dado é a seguinte:
 
-    #set math.mat(align: right, delim: "[")
+    
     $
       mat(
         1, 0, 3, -4;
@@ -403,7 +403,7 @@
 
       Observemsos que encontramos dois ternos ordenados os quais são solução so sistema de equações. Nesse caso, podemos conluir que o sistema possui infinitas soluções. De fato, 
 
-      #set math.mat(align: right, delim: "[")
+      
       $
         cases(
           2x_1 &- 4x_2 &- x_3 &= 1\
@@ -640,7 +640,7 @@
 
       Dado que encontramos mais de uma solução, o sistema deve ter infinitas soluções. De fato, 
       #set text(size: 10pt)
-      #set math.mat(align: right, delim: "[")
+      
       $
         cases(
           &x_1 +  2&x_2 - 2&x_3 &= 3\
@@ -766,7 +766,7 @@
 + Em cada parte, encontre um sistema de equações lineares correspondente à matriz aumentada dada.
 
   #set enum(numbering: "(a)")
-  #set math.mat(align: right, delim: "[")
+  
   + $display(mat(
         2,0,0;
         3, -4, 0;
@@ -831,6 +831,237 @@
         )
       $
     ])
+
++ Em cada parte, encontre um sistema de equações lineares correspondente à matriz aumentada dada.
+
+  
+  #set enum(numbering: "(a)")
+  + $display(mat(
+      2, -1;
+      -4, -6;
+      1, -1;
+      3, 0
+    ))$
+
+    #solution([
+      $
+        cases(
+          &2&x &= -&1\
+          -&4&x &= -&6\
+          &&x &= -&1\
+          &3&x &= &0
+        )
+      $
+    ])
+
+  + $display(mat(
+      0, 3, -1, -1, -1;
+      5, 2, 0, -3, -6
+    ))$
+
+    #solution([
+      $
+        cases(
+          & 3&x_2 -&x_3 -&&x_4 &= -1\
+          5&x_1 +2&x_2 & -&3&x_4 &= -6
+        )
+      $
+    ])
+
+  + $display(mat(
+      1, 2, 3, 4;
+      -4, -3, -2, -1;
+      5, -6, 1, 1;
+      -8, 0, 0, 3
+    ))$
+
+    #solution([
+      $
+        cases(
+          & &x_1 + 2&x_2 + 3&x_3 &= &4\
+          -&4&x_1 -3&x_2 -2&x_3 &= -&1\
+          &5&x_1 -6&x_2 + &x_3 &= &1\
+          -&8&x_1 & & &= &3
+        )
+      $
+    ])
+
+  + $display(mat(
+      3, 0, 1, -4, 3;
+      -4, 0, 4, 1, -3;
+      -1, 3, 0, -2, -9;
+      0, 0, 0, -1, -2
+    ))$
+
+    #solution([
+      $
+        cases(
+          &3&x_1 &+&&x_3 &-&4&x_4 &= &3\
+          -&4&x_1 &+&4&x_3 &+&&x_4 &= -&3\
+          -&&x_1 &+ &3&x_2 &-&2&x_4 &= -&9\
+          &&&&&&-&&x_4 &= -&2
+        )
+      $
+    ])
+
++ Em cada parte, encontre a matriz aumentada do sistema de equações lineares dado.
+  #set enum(numbering: "(a)")
+  + $display(cases(
+      -&2&x_1 &= &6\
+      &3&x_1 &= &8\
+      &9&x_1 &= -&3
+    ))$
+
+    #solution([
+      
+      $
+        mat(
+          -2, 6;
+          3, 8;
+          9, -3
+        )
+      $
+    ])
+
+  + $display(cases(
+      &6&x_1& - &&x_2& + &3&x_3& &= 4\
+      &&& &5&x_2& - &&x_3& &= 1
+    ))$
+
+    #solution([
+      
+      $
+        mat(
+          6, -1, 3, 4;
+          0, 5, -1, 1
+        )
+      $
+    ])
+
+  + $display(cases(
+      &&& &2&x_2& &&& - &3&x_4& + &&x_5& = &0\
+      -&3&x_1& - &&x_2& + &&x_3& &&& &&& = -&1\
+      &6&x_1& + &2&x_2& - &&x_3& + &2&x_4& - &3&x_5& = &6
+    ))$
+
+    #solution([
+      
+      $
+        mat(
+          0, 2, 0, -3, 1, 0;
+          -3, -1, 1, 0, 0, -1;
+          6, 2, -1, 2, -3, 6
+        )
+      $
+    ])
+
+
++ Em cada parte, encontre a matriz aumentada do sistema de equações lineares dado.
+
+  #set enum(numbering: "(a)")
+  + $display(cases(
+      3x_1 - 2x_2 = -&1\
+      4x_1 + 5x_2 = &3\
+      7x_1 + 3x_2 = &2
+    ))$
+
+    
+    #solution([
+      $
+        mat(
+          3, -2, -1;
+          4, 5, 3;
+          7, 3, 2
+        )
+      $
+    ])
+
+  + $display(cases(
+      &2&x_1&  &&& + &2&x_3& &=& 1\
+      &3&x_1& - &&x_2& + &4&x_3& &=&7\
+      &6&x_1& + &&x_2& - &&x_3& &=& 0
+    ))$
+
+    #solution([
+      
+      $
+        mat(
+          2, 0, 2, 1;
+          3, -1, 4, 7;
+          6, 1, -1, 0
+        )
+      $
+    ])
+
+  + $display(cases(
+      &&x_1& + &2&x_2& &&& - &&x_4& + &&x_5& &= 1\
+      &&& &3&x_2& + &&x_3& &&& - &&x_5& &= 2\
+      &&& &&& &&x_3& + &7&x_4& &&& &= 1
+    ))$
+
+    #solution([
+      
+      $
+        mat(
+          1, 2, 0, -1, 1, 1;
+          0, 3, 1, 0, -1, 2;
+          0, 0, 1, 7, 0, 1 
+        )
+      $
+    ])
+
+  + $display(cases(
+      &x_1 & & &= 1\
+      & &x_2 & &= 2\
+      & & &x_3 &= 3
+    ))$
+
+    #solution([
+      
+      $
+        mat(
+          1, 0, 0, 1;
+          0, 1, 0, 2;
+          0, 0, 1, 3
+        )
+      $
+    ])
+
++ A curva $y = a x^2 + b x + c$ mostrada na figura passa pelos pontos $(x_1, y_1)$, $(x_2, y_2)$ e $(x_3, y_3)$. Mostre que os coeficientes $a$, $b$ e $c$ são uma solução do sistema de equações lineares cuja matriz aumentada é 
+
+
+$
+  mat(
+    x_1^2, x_1, 1, y_1;
+    x_2^2, x_2, 1, y_2;
+    x_3^2, x_3, 1, y_3
+  )
+$
+
+#figure(
+  //caption: [],
+  image("../assets/images/ch01/ex-01-01-15.png", width: 6cm)
+)
+
+#solution([
+  Substituindo as coordenadas de cada ponto na equação da parábola, obtemos:
+
+  $
+    cases(
+      y_1 = a x_1^2 + b x_1  + c\
+      y_2 = a x_2^2 + b x_2  + c\
+      y_3 = a x_3^2 + b x_3  + c
+    )
+    arrow.double 
+    cases(
+      x_1^2 a + x_1 b + c = y_1\
+      x_2^2 a + x_2 b + c = y_2\
+      x_3^2 a + x_3 b + c = y_3
+    )
+  $
+  Dados que os coeficiente $a$, $b$ e $c$ da parábola devem satisfazer às três equações acima, então essas equações formam um sistema linear para as incógnitas $a$, $b$ e $c$.
+])
+
 
 
    
