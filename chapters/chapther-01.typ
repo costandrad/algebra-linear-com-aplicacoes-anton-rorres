@@ -686,6 +686,14 @@
       $
 
       Em particular, 
+      #set table(
+        stroke: (x, y) => if y==0 {
+          (top: 0.7pt + black)
+          (bottom: 0.7pt + black)
+        } else {
+          (bottom: 0.7pt + black)
+        }
+      )
       #align(center, table(
         columns: 4,
         table.header(
@@ -703,13 +711,126 @@
 
   #set enum(numbering: "(a)")
   + $7x - 5y = 3$
+    #solution([
+      Tomando $x = r$ como parâmetro e isolando $y$ na equação dada, temos:
+      $
+        7x - 5y = 3 arrow.double y = frac(7x - 3, 5) arrow.double
+        cases(
+          x &= r\
+          y &= frac(7r - 3, 5)
+        )
+      $
+    ])
 
   + $-8x_1 + 2x_2 - 5x_3 + 6x_4 = 1$
+    #solution([
+      Tomando os parâmetros $x_1 = r$, $x_2 = s$ e $x_3 = t$ e substituindo na equação, temos:
+      $
+        -8x_1 + 2x_2 - 5x_3 + 6x_4 = 1 &arrow.double x_4 = frac(1+8x_1-2x_2+5x_3, 6)\
+        &arrow.double x_4 = 1/6 + 4/3x_1 - 1/3 x_2 + 5/6 x_3\
+        &arrow.double x_4 = 1/6 + 4/3r - 1/3 s + 5/6 t arrow.double
+        cases(
+          x_1 &= r\
+          x_2 &= s\
+          x_3 &= t\
+          x_4 &= 1/6 + 4/3r - 1/3 s + 5/6 t 
+        )
+      $
+    ])
 
-+ Em cda parte, encontre o conjunto solução da equação linear usando um parâmetro, se necessário.
++ Em cada parte, encontre o conjunto solução da equação linear usando um parâmetro, se necessário.
 
   #set enum(numbering: "(a)")
   + $3x_1 - 5x_2 + 4x_3 = 7$
+    #solution([
+      Tomando os parâmetros $x_1 = r$ e $x_2 = s$, e substituindo na equação dada, temos:
+      $
+        3x_1 - 5x_2 + 4x_3 = 7 &arrow.double x_3 = frac(7 - 3x_1 + 5x_2, 4)\
+        &arrow.double x_3 = 7/4 - 3/4 x_1 + 5/4x_2\
+        &arrow.double x_3 = 7/4 - 3/4 r + 5/4 s\
+        &arrow.double cases(
+          x_1 &= r\
+          x_2 &= s\
+          x_3 &= 7/4 - 3/4 r + 5/4 s
+        ) 
+      $
+    ])
 
   + $3v - 8w + 2x - y + 4z = 0$ 
+    #solution([
+      $
+        3v - 8w + 2x - y + 4z = 0 arrow.double z = frac(-3v + 8w - 2x + y, 4)
+      $
+    ])
+
++ Em cada parte, encontre um sistema de equações lineares correspondente à matriz aumentada dada.
+
+  #set enum(numbering: "(a)")
+  #set math.mat(align: right, delim: "[")
+  + $display(mat(
+        2,0,0;
+        3, -4, 0;
+        0, 1, 1
+      ))
+    $
+    
+    #solution([
+      $
+        cases(
+          2&x_1 & &= 0\
+          3&x_1 - 4&x_2 &= 0\
+          & &x_2 &= 1
+        )
+      $
+    ])
+
+  + $display(mat(
+      3, 0, -2, 5;
+      7, 1, 4, -3;
+      0, -2, 1, 7
+    ))$
+
+    #solution([
+      $
+        cases(
+          3&x_1 & & &- 2 &x_3 &= &5\
+          7&x_1 &+ &x_2 &+ 4&x_3 &= -&3\
+          & &-2&x_2 &+ &x_3 &= &7
+        )
+      $
+    ])
+
+  + $display(mat(
+      7, 2, 1, -3, 5;
+      1, 2, 4, 0, 1
+    ))$
+
+    #solution([
+      $
+        cases(
+          7&x_1 + 2&x_2 +&x_3 -3&x_4 &= 5\
+          &x_1 -2 & x_2 + 4&x_3 & &= 1
+        )
+      $
+    ])
+
+  + $display(mat(
+      1, 0, 0, 0, 7;
+      0, 1, 0, 0, -2;
+      0, 0, 1, 0, 3;
+      0, 0, 0, 1, 4
+    ))$
+
+    #solution([
+      $
+        cases(
+          &x_1 & & & &= &7\
+          & &x_2 & & &= -&2 \
+          & & &x_3 & &= &3\
+          & & & & x_4 &= &4
+        )
+      $
+    ])
+
+
    
