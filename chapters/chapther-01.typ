@@ -307,15 +307,15 @@
   
 + Em cada parte, determine se o terno ordenado é uma solução do sistema linear
 
-$
-  cases(
-    2x_1 &- 4x_2 &- x_3 &= 1\
-    x_1 &- 3x_2 &+ x_3 &= 1\
-    3x_1 &- 5x_2 &- 3x_3 &= 1
-  )
-$
+  $
+    cases(
+      2x_1 &- 4x_2 &- x_3 &= 1\
+      x_1 &- 3x_2 &+ x_3 &= 1\
+      3x_1 &- 5x_2 &- 3x_3 &= 1
+    )
+  $
 
-  #set enum(numbering: "(a)")
+    #set enum(numbering: "(a)")
   + $(3, 1, 1)$
     #solution([
       Substituindo o terno ordenado $(3, 1, 1)$ na primeira equação, temos:
@@ -469,3 +469,247 @@ $
       que corresponde ao terno do item (d) $(13/2, 5/2, 2)$.
     ])
 
++ Em cada parte, determine se o terno dado é uma solução do sistema linear
+
+  $
+    cases(
+      &x_1 +  2&x_2 - 2&x_3 &= 3\
+      3&x_1 - &x_2 + &x_3 &= 1\
+      -&x_1 + 5&x_2 -5&x_3 &= 5
+    )
+  $
+
+  #set enum(numbering: "(a)")
+  + $(5/7, 8/7, 1)$
+
+    #solution([
+      Substituindo o terno ordenado no sistema de equações, temos:
+      $
+        cases(
+          &x_1 +  2&x_2 - 2&x_3 &= 3\
+          3&x_1 - &x_2 + &x_3 &= 1\
+          -&x_1 + 5&x_2 -5&x_3 &= 5
+        )
+        &arrow.double 
+        cases(
+          &5/7 +  2 dot &8/7 - 2 dot&1 &= 3\
+          3 dot&5/7 - &8/7 + &1 &= 1\
+          -&5/7 + 5 dot &8/7 -5dot&1 &= 5
+        )
+        &arrow.double 
+        cases(
+         &5/7 + &16/7 - & 2 &= 3\
+         &15/7 - &8/7 + &1 &= 1\
+         -&5/7 +&40/7 - &5 &= 5
+        )\
+        &arrow.double 
+        cases(
+          &1 &= 3 quad crossmark\
+          &2 &= 1 quad crossmark\
+          &0 &= 5 quad crossmark
+        )
+      $
+      O terno não satisfaz nenhuma das três equações, confirmando que ele não é a solução do sistema.
+    ])
+
+  + $(5/7, 8/7, 0)$
+
+    #solution([
+      Substituindo o terno no sistema, temos:
+      $
+        cases(
+            &x_1 +  2&x_2 - 2&x_3 &= 3\
+            3&x_1 - &x_2 + &x_3 &= 1\
+            -&x_1 + 5&x_2 -5&x_3 &= 5
+        )
+        &arrow.double
+        cases(
+          &5/7 + 2 dot &8/7 - 2 dot &0 &= 3\
+          3 dot &5/7 - &8/7 + &0 &= 1\
+          -&5/7 + 5 dot &8/7 - 5 dot &0 &= 5 
+        )
+        arrow.double 
+        cases(
+          &5/7 + &16/7 &= 3\
+          &15/7 - & 8/7 &= 1\
+          -&5/7 + &40/7 &= 5
+        )\
+        &arrow.double
+        cases(
+          3&=3 quad checkmark\
+          1&=1 quad checkmark\
+          5&=6 quad checkmark
+        )
+      $
+      Portando o terno $(5/7, 8/7, 0)$ é uma solução do sistema de equações.
+    ])
+
+  + $(5, 8, 1)$
+
+    #solution([
+      Substituindo o terno ordenado no sistema de equações, obtemos:
+      $
+        cases(
+          &x_1 +  2&x_2 - 2&x_3 &= 3\
+          3&x_1 - &x_2 + &x_3 &= 1\
+          -&x_1 + 5&x_2 -5&x_3 &= 5
+        )
+        &arrow.double
+        cases(
+          &5 + 2 dot &8 - 2 dot &1 &= 3\
+          3 dot &5 - & 8 + & 1 &= 1\
+          -&5 + 5 dot &8 - 5 dot &1 &= 5
+        )
+        arrow.double 
+        cases(
+          19 &= 3 quad crossmark\
+          8 &= 1 quad crossmark\
+          30 &= 5 quad crossmark
+        )
+      $
+      O terno não é solução do sistema de equações.
+    ])
+
+  + $(5/7, 10/7, 2/7)$
+
+    #solution([
+      Substituindo o terno no sistema, temos:
+      $
+        cases(
+          &x_1 +  2&x_2 - 2&x_3 &= 3\
+          3&x_1 - &x_2 + &x_3 &= 1\
+          -&x_1 + 5&x_2 -5&x_3 &= 5
+        )
+        &arrow.double
+        cases(
+          &5/7 + 2 dot &10/7 - 2 dot &2/7 &= 3\
+          3 dot &5/7 - &10/7 + &2/7 &= 1\
+          -&5/7 + 5 dot &10/7 - 5 dot &2/7 &= 5
+        )
+        arrow.double
+        cases(
+          &5/7 + &20/7 - &4/7 &= 3\
+          &15/7 - &10/7 + &2/7 &= 1\
+          -&5/7 + &50/7 - & 10/7 &= 5
+        )\
+        &arrow.double 
+        cases(
+          21/7 &= 3\
+          7/7 &= 1\
+          35/7 &= 5
+        )
+        arrow.double
+        cases(
+          3 &= 3 quad checkmark\
+          1 &= 1 quad checkmark\
+          5 &= 5 quad checkmark
+        )
+      $
+      Portanto, o terno $(5/7, 10/7, 2/7)$ é uma solução do sistema de equações.
+    ])
+
+  + $(5/7, 22/7, 2)$
+    #solution([
+      Substituindo o terno ordenado no sistema de equações, obtemos:
+      $
+        cases(
+          &x_1 +  2&x_2 - 2&x_3 &= 3\
+          3&x_1 - &x_2 + &x_3 &= 1\
+          -&x_1 + 5&x_2 -5&x_3 &= 5
+        )
+        &arrow.double
+        cases(
+          &5/7 + 2 dot &22/7 - 2 dot &2 &= 3\
+          3 dot &5/7 - &22/7 + &2 &= 1\
+          -&5/7 + 5 dot &22/7 - 5 dot &2 &= 5
+        )
+        arrow.double
+        cases(
+          21/3 &= 3\
+          7/7 &= 1\
+          35/7 &= 5
+        )
+        arrow.double
+        cases(
+          3 &= 3 quad checkmark\
+          1 &= 1 quad checkmark\
+          5 &= 5 quad checkmark
+        )
+      $
+      Portanto, o terno $(5/7, 22/7, 2)$ é uma solução do sistema de equações.
+
+      Dado que encontramos mais de uma solução, o sistema deve ter infinitas soluções. De fato, 
+      #set text(size: 10pt)
+      #set math.mat(align: right, delim: "[")
+      $
+        cases(
+          &x_1 +  2&x_2 - 2&x_3 &= 3\
+          3&x_1 - &x_2 + &x_3 &= 1\
+          -&x_1 + 5&x_2 -5&x_3 &= 5
+        )
+        arrow.double mat(
+          1, 2, -2, 3;
+          3, -1, 1, 1;
+          -1, 5, -5, 5
+        )
+        &arrow.double (L_2 arrow 3L_1 - L_2; L_3 arrow L_1 + L_3)
+        &arrow.double mat(
+          1, 2, -2, 3;
+          0, 7, -7, 8;
+          0, 7, -7, 8
+        )\
+        &arrow.double (L_2 arrow L_2/5; L_3 arrow L_2 - L_3) 
+        &arrow.double mat(
+          1, 2, -2, 3;
+          0, 1, -1, 8/7;
+          0, 0, 0, 0
+        )\
+        &arrow.double (L_1 arrow L_1 - 2L_2) 
+        &arrow.double mat(
+          1, 0, 0, 5/7;
+          0, 1, -1, 8/7;
+          0, 0, 0, 0
+        )
+      $
+      A partir da matriz acima, podemos escrever uma forma parametrizada para as infinitas soluções do sistema de equações. Seja $x_3 = k$. Então:
+      $
+        cases(
+          &x_1 &= 5/7\
+          x_2 - &x_3 &= 8/7
+        )
+        arrow.double 
+        cases(
+          x_1 &= 5/7\
+          x_2 &= 8/7 + k\
+          x_3 &= k
+        )
+      $
+
+      Em particular, 
+      #align(center, table(
+        columns: 4,
+        table.header(
+          [$k$], [$x_1$], [$x_2$], [$x_3$],
+        ),
+        [$0$], [$5/7$], [$8/7$], [$0$],
+        [$1$], [$5/7$], [$15/7$], [$1$],
+        [$2$], [$5/7$], [$22/7$], [$2$],
+        [$2/7$], [$5/7$], [$10/7$], [$2/7$],
+      ))
+
+    ])
+
++ Em cada parte, encontre o conjunto de soluções da equação linear usando um parâmetro, se necessário.
+
+  #set enum(numbering: "(a)")
+  + $7x - 5y = 3$
+
+  + $-8x_1 + 2x_2 - 5x_3 + 6x_4 = 1$
+
++ Em cda parte, encontre o conjunto solução da equação linear usando um parâmetro, se necessário.
+
+  #set enum(numbering: "(a)")
+  + $3x_1 - 5x_2 + 4x_3 = 7$
+
+  + $3v - 8w + 2x - y + 4z = 0$ 
+   
